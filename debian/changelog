@@ -1,0 +1,194 @@
+libetonyek (0.1.10-3) unstable; urgency=medium
+
+  * support mdds-2.0 and mdds-1.5 (and remove support for mdds-1.4);
+    adapt build-deps accordingly
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 03 Nov 2021 20:49:44 +0100
+
+libetonyek (0.1.10-2) unstable; urgency=medium
+
+  * upload to unstable 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 15 Aug 2021 08:28:58 +0200
+
+libetonyek (0.1.10-1) experimental; urgency=medium
+
+  * New upstream version 0.1.10
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 24 May 2021 18:59:15 +0200
+
+libetonyek (0.1.9-4) unstable; urgency=medium
+
+  * build-depend on libmdds-dev (>= 1.4), libmdds-dev (<< 1.8~)
+  * build-depend on librevenge-dev (<< 0.1~)
+  * debian/patches/algorithm.diff: add missing #include <algorithm>
+    (closes: #975442)
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 22 Nov 2020 17:24:10 +0100
+
+libetonyek (0.1.9-3) unstable; urgency=medium
+
+  * debian/patches/glm-0.9.9.diff: backport from LO master; proper
+    initialization for glm >= 0.9.9 
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 06 Feb 2020 20:01:26 +0100
+
+libetonyek (0.1.9-2) unstable; urgency=medium
+
+  * support mdds 1.5 in rules and bump mdds build-dep to >= 1.4 (already
+    in stable) 
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 25 Dec 2019 17:50:18 +0100
+
+libetonyek (0.1.9-1) unstable; urgency=medium
+
+  * New upstream version 0.1.9
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 30 Dec 2018 10:51:55 +0000
+
+libetonyek (0.1.8-2) unstable; urgency=medium
+
+  * fix libetonyek-tools.install and package libetonyek-tools (closes: #908981)
+
+  * support mdds 1.4 in rules and bump mdds build-dep to >= 1.2
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 23 Sep 2018 18:10:13 +0000
+
+libetonyek (0.1.8-1) unstable; urgency=medium
+
+  * New upstream version 0.1.8
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 22 Apr 2018 11:20:51 +0200
+
+libetonyek (0.1.7-3) unstable; urgency=medium
+
+  * debian/patches/drop-lo-longer-needed-tests.diff,
+    debian/patches/glm-0.9.9.diff: add upstream fixes for build with glm 0.9.9
+  (closes: #888929)
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 05 Mar 2018 08:35:06 +0100
+
+libetonyek (0.1.7-2) unstable; urgency=medium
+
+  * add liblangtag-dev to libetonyek-devs Depends: (closes: #880275)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 31 Oct 2017 11:38:13 +0100
+
+libetonyek (0.1.7-1) unstable; urgency=medium
+
+  * New upstream version 0.1.7
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 23 Oct 2017 14:31:37 +0200
+
+libetonyek (0.1.6-5) unstable; urgency=medium
+
+  * [ada2ab5] use O0 ("noopt") on arm* and *i386 to work around test
+    failures (closes: #837909)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 04 Oct 2016 22:54:30 +0200
+
+libetonyek (0.1.6-4) unstable; urgency=medium
+
+  * [a81f173] add drop-test-that-violates-Unicode-tr-35 from Fedora to
+    fix tests with new liblangtag
+  * [b8cf5c1] add missing Depends: on libxml2-dev and zlib1g-dev to
+    libetonyek-dev
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 04 Oct 2016 19:51:14 +0200
+
+libetonyek (0.1.6-3) unstable; urgency=medium
+
+  * [b18b650] move Maintainer: to Debian LibreOffice Maintainers
+  * [45def16] multiarchify
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 12 Sep 2016 21:44:53 +0200
+
+libetonyek (0.1.6-2) unstable; urgency=medium
+
+  * [7e27d68] build with mdds 1.2 (closes: #824584)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 17 May 2016 22:03:03 +0200
+
+libetonyek (0.1.6-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 14 Jan 2016 19:57:21 +0100
+
+libetonyek (0.1.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 03 Dec 2015 21:27:46 +0100
+
+libetonyek (0.1.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 19 Nov 2015 22:11:31 +0100
+
+libetonyek (0.1.3-3) unstable; urgency=medium
+
+  * actually the test failure with libxml2 was for libvisio, not here,
+    enable unconditionally
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 22 Sep 2015 12:00:20 +0200
+
+libetonyek (0.1.3-2) unstable; urgency=medium
+
+  * re-enable the tests given Debian is back at libxml2 2.9.1
+
+  * apply parts of the "package cleanup patch" in #798606:
+    - Bump standards version.
+    - Enable parallel builds.
+    - Build using dh-autoreconf.
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 18 Sep 2015 13:22:48 +0200
+
+libetonyek (0.1.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 24 Jun 2015 11:29:00 +0000
+
+libetonyek (0.1.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 19 May 2015 14:14:06 +0000
+
+libetonyek (0.1.1-2) unstable; urgency=low
+
+  * upload to unstable 
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 07 Aug 2014 23:19:02 +0200
+
+libetonyek (0.1.1-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 03 Jun 2014 18:41:50 +0200
+
+libetonyek (0.1.0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 23 May 2014 21:58:19 +0200
+
+libetonyek (0.0.4-2) unstable; urgency=low
+
+  * upload to unstable 
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 06 May 2014 21:55:54 +0200
+
+libetonyek (0.0.4-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 15 Apr 2014 17:05:47 +0200
+
+libetonyek (0.0.3-1) experimental; urgency=low
+
+  * Initial release
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 21 Feb 2014 20:24:17 +0100

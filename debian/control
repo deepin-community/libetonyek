@@ -1,0 +1,63 @@
+Source: libetonyek
+Priority: optional
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Uploaders: Rene Engelhard <rene@debian.org>
+Build-Depends: dh-autoreconf,
+               debhelper (>= 10),
+               gperf,
+               libboost-dev,
+               libboost-filesystem-dev,
+               libcppunit-dev,
+               libglm-dev,
+               liblangtag-dev,
+               libmdds-dev (>= 1.5),
+               libmdds-dev (<< 2.1~),
+               librevenge-dev (<< 0.1~),
+               libxml2-dev,
+               zlib1g-dev,
+               pkg-config
+Standards-Version: 3.9.6
+Section: libs
+Homepage: http://www.freedesktop.org/wiki/Software/libetonyek
+
+Package: libetonyek-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libetonyek-0.1-1 (= ${binary:Version}),
+         liblangtag-dev,
+         librevenge-dev,
+         libxml2-dev,
+         zlib1g-dev,
+         ${misc:Depends}
+Description: library for reading and converting Apple Keynote presentations
+ libetonyek is a library and a set of tools for reading and converting
+ Apple Keynote presentations. The library tries to extract the most
+ important parts of version 2 format of Keynote (version 1 is not
+ supported yet, but it should be in the future).
+ .
+ This package contains the development files (headers, ...)
+
+Package: libetonyek-0.1-1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for reading and converting Apple Keynote presentations
+ libetonyek is a library and a set of tools for reading and converting
+ Apple Keynote presentations. The library tries to extract the most
+ important parts of version 2 format of Keynote (version 1 is not
+ supported yet, but it should be in the future).
+
+Package: libetonyek-tools
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for reading and converting Apple Keynote presentations -- tools
+ libetonyek is a library and a set of tools for reading and converting
+ Apple Keynote presentations. The library tries to extract the most
+ important parts of version 2 format of Keynote (version 1 is not
+ supported yet, but it should be in the future).
+ .
+ This package contains key2text, key2raw and key2xhtml for "converting"
+ Keynote presentations in  those respective formats.
+

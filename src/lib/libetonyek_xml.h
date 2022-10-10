@@ -1,0 +1,49 @@
+/* -*- Mode: C++; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+/*
+ * This file is part of the libetonyek project.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+#ifndef LIBETONYEK_XML_H_INCLUDED
+#define LIBETONYEK_XML_H_INCLUDED
+
+#include <memory>
+#include <string>
+
+#include <boost/optional.hpp>
+
+#include <libxml/xmlreader.h>
+
+#include "libetonyek_utils.h"
+
+namespace libetonyek
+{
+
+std::unique_ptr<xmlTextReader, void (*)(xmlTextReaderPtr)> xmlReaderForStream(const RVNGInputStreamPtr_t &input);
+
+/** Convert string value to bool.
+  *
+  * @arg value the string
+  * @returns the boolean value of the string
+  */
+bool bool_cast(const char *value);
+boost::optional<bool> try_bool_cast(const char *value);
+
+double double_cast(const char *value);
+boost::optional<double> try_double_cast(const char *value);
+
+int int_cast(const char *value);
+boost::optional<int> try_int_cast(const char *value);
+
+const char *char_cast(const char *c);
+const char *char_cast(const signed char *c);
+const char *char_cast(const unsigned char *c);
+
+}
+
+#endif // LIBETONYEK_XML_H_INCLUDED
+
+/* vim:set shiftwidth=2 softtabstop=2 expandtab: */

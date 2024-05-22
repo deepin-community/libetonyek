@@ -10,12 +10,13 @@ Build-Depends: dh-autoreconf,
                libcppunit-dev,
                libglm-dev,
                liblangtag-dev,
-               libmdds-dev (>= 1.5),
-               libmdds-dev (<< 2.1~),
+               libmdds-dev (>= 2.0),
+               libmdds-dev (<< 2.2~),
                librevenge-dev (<< 0.1~),
                libxml2-dev,
                zlib1g-dev,
                pkg-config
+Build-Conflicts: libboost1.81-dev (= 1.81.0-1~exp1), libboost1.81-dev (= 1.81.0-1)
 Standards-Version: 3.9.6
 Section: libs
 Homepage: http://www.freedesktop.org/wiki/Software/libetonyek

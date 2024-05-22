@@ -7,7 +7,7 @@ include /usr/share/dpkg/architecture.mk
 
 CONFIGURE_FLAGS:= --disable-werror --with-boost-libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
-MDDS_VER:=$(shell pkg-config --exists mdds-2.0 && echo 2.0 || echo 1.5)
+MDDS_VER:=$(shell pkg-config --exists mdds-2.1 && echo 2.1 || echo 2.0)
 CONFIGURE_FLAGS += --with-mdds=$(MDDS_VER)
 
 ifneq (noopt,$(findstring noopt,$(DEB_BUILD_OPTIONS)))

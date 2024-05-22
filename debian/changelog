@@ -1,3 +1,19 @@
+libetonyek (0.1.10-5) unstable; urgency=medium
+
+  * add Build-Conflicts: libboost1.81-dev (= 1.81.0-1~exp1),
+    libboost1.81-dev (= 1.81.0-1) 
+
+  * upload to unstable
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 15 Jan 2023 11:39:35 +0100
+
+libetonyek (0.1.10-4) experimental; urgency=medium
+
+  * support mdds-2.1 and mdds-2.0 (and remove support for mdds-1.5);
+    adapt build-deps accordingly
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 13 Jan 2023 18:58:23 +0100
+
 libetonyek (0.1.10-3) unstable; urgency=medium
 
   * support mdds-2.0 and mdds-1.5 (and remove support for mdds-1.4);

@@ -1,3 +1,9 @@
+libetonyek (0.1.10-5deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 19 Sep 2024 22:53:50 +0800
+
 libetonyek (0.1.10-5) unstable; urgency=medium
 
   * add Build-Conflicts: libboost1.81-dev (= 1.81.0-1~exp1),
